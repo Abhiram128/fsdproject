@@ -58,7 +58,7 @@ const authenticateToken = (req, res, next) => {
   console.log(userEmail);
     try {
       const events = await Event.find({ email: userEmail });
-      console.log(events);
+    
       res.status(200).json(events);
     } catch (error) {
       console.error('Error fetching events:', error);
@@ -70,7 +70,7 @@ const authenticateToken = (req, res, next) => {
 
     try {
       const events = await Event.find();
-      console.log(events);
+      //console.log(events);
       res.status(200).json(events);
     } catch (error) {
       console.error('Error fetching events:', error);

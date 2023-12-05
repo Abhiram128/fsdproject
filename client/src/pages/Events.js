@@ -7,14 +7,27 @@ const EventsPage = () => {
   const { events, loading } = useEvents1();
 
   return (
-    <div style={{ display: 'flex' }}>
-      <div style={{ flex: 1, marginLeft: '200px' }}>
-        <div className="events-page">
-          <h2 className="text-4xl font-medium text-maroon mb-10">Events</h2>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '150vh' }}>
+      <div
+        style={{
+          flex: 1,
+          marginLeft: '100px',
+          marginRight: '100px',
+          paddingLeft: '5px',
+          marginTop: '50px',
+          marginBottom: '50px',
+          display: 'flex',
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Box shadow style
+        }}
+        className="events-page"
+      >
+        <div style={{ flex: 1}}>
+          <h2 className="text-5xl font-medium text-maroon mb-10 ml-[45%]">Events</h2>
+
           {loading ? (
             <p>Loading events...</p>
           ) : (
-            <div className="text-center">
+            <div className="" style={{marginLeft:"100px" }}>
               {events.map((event) => (
                 <EventCard key={event._id} event={event} />
               ))}

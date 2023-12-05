@@ -28,21 +28,23 @@ export const useLogin = () => {
       if (!res.ok) {
         setLoading(false);
         setError(json.error);
+        return { success: false, error: json.error, user: null };
       }
 
-      if (res.ok) {
-        // Update the auth context
-        dispatch({ type: "LOGIN", payload: json });
-        console.log(json);
-        // Save the user to local storage
-        localStorage.setItem("user", JSON.stringify(json));
+      // Update the auth context
+      dispatch({ type: "LOGIN", payload: json });
 
-        setLoading(false);
-      }
+      // Save the user to local storage
+      localStorage.setItem("user", JSON.stringify(json));
+
+      setLoading(false);
+
+      return { success: true, error: null, user: json };
     } catch (error) {
       console.error("Login error:", error);
       setLoading(false);
       setError("An error occurred during login.");
+      return { success: false, error: "An error occurred during login.", user: null };
     }
   };
 

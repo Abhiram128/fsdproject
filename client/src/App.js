@@ -13,6 +13,7 @@ import EventForm from './pages/EventForm';
 import EventsPage from './pages/EventsPage';
 import Events from './pages/Events';
 
+import AlumniTable from './pages/AlumniTable';
 function App() {
   return (
     <Router>
@@ -28,6 +29,7 @@ function App() {
            <Route path="/EventForm" element={<EventForm />} />
            <Route path="/EventsPage" element={<EventsPage />} />
            <Route path="/Events" element={<Events />} />
+           <Route path="/AlumniTable" element={<AlumniTable />} />
           </Routes>
         </div>
         <Footer />

@@ -38,4 +38,18 @@ const signupUser = async (req, res) => {
   }
 };
 
-module.exports = { loginUser, signupUser };
+const getAllUsers = async (req, res) => {
+  try {
+    console.log("Entetermined")
+    // Find all users in the database
+    const users = await User.find();
+console.log(users)
+    // Return the users in the response
+    res.status(200).json(users);
+  } catch (err) {
+    // Handle errors
+    res.status(500).json({ error: err.message });
+  }
+};
+
+module.exports = { loginUser, signupUser, getAllUsers };

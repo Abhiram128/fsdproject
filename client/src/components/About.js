@@ -21,11 +21,11 @@ function About() {
   ];
 
   return (
-    <div className='space-y-8'>
-      <div className='font-display space-y-2 mt-14'>
-        <p className='text-black font-extrabold text-4xl'>Events</p>
+    <div className='space-y-8 ml-[8%] mr-[7%]'>
+      <div className='font-display space-y-2 mt-14 '>
+        <p className='text-black font-extrabold text-4xl text-maroon'>Events</p>
       </div>
-      <div className='grid grid-cols-3 gap-3 space-x-2 '>
+      <div className='grid grid-cols-3 gap-3 space-x-2'>
         {cardData.map((card, index) => (
           <div key={index} className='bg-transparent min-h-[30vh] rounded-3xl p-5 flex flex-col justify-end'>
             <div className='flex flex-col items-center text-center space-y-6'>
@@ -40,8 +40,7 @@ function About() {
                 <p className='font-semibold text-lg text-[#385529]'>{card.title}</p>
                 <p className='text-[#385529] font-light text-wrap w-4/5'>{card.description}</p>
               </div>
-              <button className='border border-black bg-dark-green py-[0.5em] px-6 rounded-lg text-white font-thin'style={{ color: 'white' }}>
-              
+              <button className='border border-black bg-dark-green py-[0.5em] px-6 rounded-lg text-white font-thin' style={{ color: 'white' }}>
                 Join now!
               </button>
             </div>

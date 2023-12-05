@@ -1,10 +1,18 @@
+// EventCard.js
+
 import React from 'react';
 
 const EventCard = ({ event }) => {
   // Assuming event has properties like title, date, time, venue, etc.
+
+  const cardStyle = {
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.35), 0 6px 8px rgba(0, 0, 0, 0.35)',
+    transition: 'transform 0.2s, box-shadow 0.5s',
+  };
+
   return (
-    <div className="inline-block max-w-md bg-white shadow-md rounded-md overflow-hidden m-4">
-      <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden flex">
+    <div className="inline-block max-w-md bg-white shadow-md rounded-md overflow-hidden m-4 transition-transform transform hover:scale-105" style={cardStyle}>
+      <div className="max-w-md bg-white shadow-md rounded-md overflow-hidden flex transition-transform transform hover:scale-105">
         <img
           src={'https://creazilla-store.fra1.digitaloceanspaces.com/emojis/53878/spiral-calendar-emoji-clipart-md.png'}
           alt={event.title}
@@ -15,7 +23,7 @@ const EventCard = ({ event }) => {
 
           <table className="table-auto text-gray-600 mb-2">
             <tbody>
-            <tr>
+              <tr>
                 <td className="pr-4">Organiser:</td>
                 <td>{event.alumniIncharge}</td>
               </tr>

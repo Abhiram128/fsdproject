@@ -21,12 +21,17 @@ const Login = () => {
     }
   
     // login user
-    await login(email, password);
-  
-    if (!error) {
-      navigate('/Dashboard'); // Replace '/dashboard' with the desired path
+    const loginResult = await login(email, password);
+  console.log(loginResult);
+    if (!loginResult || loginResult.error) {
+      console.log("Login failed.");
+      return;
     }
+  
+    // Navigate to the dashboard if no error
+    navigate('/EventsPage'); // Replace '/dashboard' with the desired path
   };
+  
   
 
   return (

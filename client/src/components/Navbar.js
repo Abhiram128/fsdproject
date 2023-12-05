@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FiUser, FiLogOut } from 'react-icons/fi'; // Assuming FiUser and FiLogOut are appropriate icons for user and logout
+import { FiUser, FiLogOut, FiMenu } from 'react-icons/fi';
 import { useAuthContext } from '../hooks/useAuthContext';
 import { useLogout } from '../hooks/useLogout';
 import logo from '../assets/logo.png';
@@ -9,66 +9,88 @@ function Navbar() {
   const { user } = useAuthContext();
   const { logout } = useLogout();
   const [isProfileOpen, setIsProfileOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleProfile = () => {
     setIsProfileOpen(!isProfileOpen);
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className='px-52 bg-[#E9EBE7] font-display flex justify-between items-center py-3 border' style={{ borderBottom: 'none' }}>
-      <div>
-        <NavLink to={user ? "/dashboard" : "/"}>
-          <img className='h-28' src={logo} alt="" />
+    <div className='px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-48 bg-[#E9EBE7] font-display flex flex-col md:flex-row justify-between items-center py-3'>
+      <div className='mb-4 md:mb-0'>
+        <NavLink to={user ? "/Eventspage" : "/"}>
+          <img className='h-14 md:h-28' src={logo} alt="" />
         </NavLink>
       </div>
-      <div style={{ marginLeft: 50 }}>
-        <ul className='flex justify-center items-center space-x-10 text-sm font-semibold text-[#385529] '>
+      <div className='md:hidden'>
+        <button onClick={toggleMenu} className='text-2xl'>
+          <FiMenu />
+        </button>
+      </div>
+      <div className={`md:flex ${isMenuOpen ? 'flex' : 'hidden'}`}>
+        <ul className='flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 text-sm font-semibold text-[#385529]'>
           <li>
-            <NavLink to="#">Gallery</NavLink>
+            <NavLink to="#" onClick={toggleMenu}>
+              Gallery
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/Events">Events</NavLink>
+            <NavLink to="/Events" onClick={toggleMenu}>
+              Events
+            </NavLink>
           </li>
           <li>
-            <NavLink to="#">Members</NavLink>
+            <NavLink to="/AlumniTable" onClick={toggleMenu}>
+              Members
+            </NavLink>
           </li>
           <li>
-            <NavLink to="#">Alumni awards</NavLink>
+            <NavLink to="#" onClick={toggleMenu}>
+              Alumni awards
+            </NavLink>
           </li>
         </ul>
       </div>
-      <div className='flex justify-center space-x-5 font-semibold' style={{ marginLeft: 20 }}>
+      <div className='flex justify-center md:space-x-5 font-semibold mt-4 md:mt-0'>
         {user ? (
-          <>
-            <div className="profile-dropdown">
-              <button onClick={toggleProfile} className='border bg-dark-green py-[0.5em] px-6 rounded-lg text-white font-thin' style={{ color: 'white', cursor: 'pointer' }}>
-                <FiUser />
-              </button>
-              {isProfileOpen && (
-                <div className="profile-dropdown-content">
-                  <ul>
-                 <li> <span>{user.fullName}</span></li>
-                  <li style={{textAlign:"center"}}><button onClick={logout}>
-                    <FiLogOut /> 
-                  </button></li>
-                  </ul>
-                </div>
-              )}
-            </div>
-          </>
+          <div className="profile-dropdown">
+            <button onClick={toggleProfile} className='border bg-dark-green py-2 px-4 md:py-[0.5em] md:px-6 rounded-lg text-white font-thin' style={{ color: 'white', cursor: 'pointer' }}>
+              <FiUser />
+            
+            </button>
+            
+            {isProfileOpen && (
+              <div className="profile-dropdown-content">
+                <ul>
+                  <li><span>{user.fullName}</span></li>
+    
+                  <li style={{ textAlign: "center" }}>
+                    <button onClick={logout} title ="click to logout">
+                      <FiLogOut />
+                    </button>
+                   
+                  </li>
+                </ul>
+              </div>
+            )}
+          </div>
         ) : (
-          <>
-           <NavLink to="/login">
-              <button className='border  bg-dark-green py-[0.5em] px-6 rounded-lg text-white font-thin' style={{ color: 'white' }}>
+          <div className='flex flex-col md:flex-row'>
+            <NavLink to="/login">
+              <button className='border bg-dark-green py-2 px-4 md:py-[0.5em] md:px-6 rounded-lg text-white font-thin' style={{ color: 'white' }} onClick={toggleMenu}>
                 Login
               </button>
             </NavLink>
             <NavLink to="/signup">
-              <button className='border  bg-dark-green py-[0.5em] px-6 rounded-lg text-white font-thin' style={{ color: 'white' }}>
+              <button className='border bg-dark-green py-2 px-4 md:py-[0.5em] md:px-6 rounded-lg text-white font-thin mt-2 md:mt-0 md:ml-4' style={{ color: 'white' }} onClick={toggleMenu}>
                 Signup
               </button>
             </NavLink>
-          </>
+          </div>
         )}
       </div>
     </div>
