@@ -34,7 +34,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="fullName"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Full Name
         </label>
@@ -52,7 +52,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="email"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
           
         >
           Email Address
@@ -71,7 +71,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="phoneNumber"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Phone Number
         </label>
@@ -89,7 +89,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="batchYear"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Batch Year
         </label>
@@ -107,7 +107,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="department"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Department
         </label>
@@ -125,7 +125,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="rollNo"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Roll Number
         </label>
@@ -142,7 +142,7 @@ const Signup = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="password"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Password
         </label>
@@ -159,7 +159,7 @@ const Signup = () => {
       <button
         disabled={loading}
         type="submit"
-        className="bg-dark-green text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{color:'white'}}
+        className="bg-[#385529] text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{color:'white'}}
       >
         Sign Up
       </button>

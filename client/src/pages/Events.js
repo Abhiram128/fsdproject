@@ -17,17 +17,17 @@ const EventsPage = () => {
           marginTop: '50px',
           marginBottom: '50px',
           display: 'flex',
-          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)', // Box shadow style
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
         }}
         className="events-page"
       >
-        <div style={{ flex: 1}}>
-          <h2 className="text-5xl font-medium text-maroon mb-10 ml-[45%]">Events</h2>
+        <div style={{ flex: 1 }}>
+          <h2 className="text-5xl font-medium text-maroon mb-10 ml-[45%]" style={{color:'maroon'}}>Events</h2>
 
           {loading ? (
             <p>Loading events...</p>
           ) : (
-            <div className="" style={{marginLeft:"100px" }}>
+            <div className="flex flex-wrap justify-center" style={{ marginLeft: "100px" }}>
               {events.map((event) => (
                 <EventCard key={event._id} event={event} />
               ))}

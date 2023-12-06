@@ -12,8 +12,10 @@ import DashboardNav from './pages/DashboardNav';
 import EventForm from './pages/EventForm';
 import EventsPage from './pages/EventsPage';
 import Events from './pages/Events';
-
+import About from './components/About';
 import AlumniTable from './pages/AlumniTable';
+import GalleryPage from './pages/GalleryPage';
+import Alumni from './pages/Alumni';
 function App() {
   return (
     <Router>
@@ -30,6 +32,9 @@ function App() {
            <Route path="/EventsPage" element={<EventsPage />} />
            <Route path="/Events" element={<Events />} />
            <Route path="/AlumniTable" element={<AlumniTable />} />
+           <Route path='/About'element={<About />}/>
+         <Route path='/GalleryPage' element={<GalleryPage />}/>
+         <Route path='/Alumni' element={<Alumni />}/>
           </Routes>
         </div>
         <Footer />

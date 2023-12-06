@@ -56,7 +56,7 @@ const EventForm = () => {
         <div className="form-control flex flex-col gap-2" style={{ marginBottom: '10px' }}>
           <label
             htmlFor="title"
-            className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+            className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
           >
             Event Title
           </label>
@@ -75,7 +75,7 @@ const EventForm = () => {
           <div className="form-control flex flex-col gap-2">
             <label
               htmlFor="date"
-              className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+              className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
             >
               Event Date
             </label>
@@ -92,7 +92,7 @@ const EventForm = () => {
           <div className="form-control flex flex-col gap-2">
             <label
               htmlFor="time"
-              className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+              className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
             >
               Event Time
             </label>
@@ -109,7 +109,7 @@ const EventForm = () => {
           <div className="form-control flex flex-col gap-2">
             <label
               htmlFor="venue"
-              className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+              className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
             >
               Event Venue
             </label>
@@ -128,7 +128,7 @@ const EventForm = () => {
         <div className="form-control flex flex-col gap-2">
           <label
             htmlFor="registrationLink"
-            className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+            className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
           >
             Registration Link
           </label>
@@ -146,7 +146,7 @@ const EventForm = () => {
         <div className="form-control flex flex-col gap-2">
           <label
             htmlFor="alumniIncharge"
-            className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+            className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
           >
             Alumni Incharge
           </label>
@@ -164,7 +164,7 @@ const EventForm = () => {
         <div className="form-control flex flex-col gap-2">
           <label
             htmlFor="team"
-            className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+            className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
           >
             Team Size
           </label>
@@ -181,7 +181,7 @@ const EventForm = () => {
 
         <button
           type="submit"
-          className="bg-dark-green text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{ color: 'white' }}
+          className="bg-[#385529] text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{ color: 'white' }}
         >
           Sign Up for Event
         </button>

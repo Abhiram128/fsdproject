@@ -44,7 +44,7 @@ const Login = () => {
       <div className="form-control flex flex-col gap-2 ">
         <label
           htmlFor="email"
-          className="cursor-pointer text-dark-green font-bold hover:text-dark-green duration-300"
+          className="cursor-pointer text-[#385529] font-bold hover:text-[#385529] duration-300"
         >
           Email Address
         </label>
@@ -61,7 +61,7 @@ const Login = () => {
       <div className="form-control flex flex-col gap-2 ">
         <label
           htmlFor="password"
-          className="cursor-pointer text-dark-green font-bold hover:text-dark-green duration-300"
+          className="cursor-pointer text-[#385529] font-bold hover:text-[#385529] duration-300"
         >
           Password
         </label>
@@ -79,7 +79,7 @@ const Login = () => {
       <button
         disabled={loading}
         type="submit"
-        className="bg-dark-green text-white py-3 rounded-xl hover:bg-darker-green duration-300 mt-3"style={{ color: 'white' }}
+        className="bg-[#385529] text-white py-3 rounded-xl hover:bg-darker-green duration-300 mt-3"style={{ color: 'white' }}
       >
         Log In
       </button>

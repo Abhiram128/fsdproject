@@ -25,7 +25,7 @@ const EventsPage = () => {
         className="events-page"
       >
         <div>
-          <h2 className="text-3xl font-medium text-dark-green mb-10 ml-[2%] " style={{ paddingTop: '25px' }}>
+          <h2 className="text-3xl font-medium text-[#385529] mb-10 ml-[2%] " style={{ paddingTop: '25px' }}>
             My Events 📒
           </h2>
           {loading ? (

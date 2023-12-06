@@ -34,7 +34,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="title"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Event Title
         </label>
@@ -52,7 +52,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="type"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Event Type
         </label>
@@ -70,7 +70,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="budget"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Budget
         </label>
@@ -88,7 +88,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="duration"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Duration (in hours)
         </label>
@@ -106,7 +106,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="alumniIncharge"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Alumni Incharge
         </label>
@@ -124,7 +124,7 @@ const AddEvent = () => {
       <div className="form-control flex flex-col gap-2">
         <label
           htmlFor="team"
-          className="cursor-pointer hover-text-sky-400 duration-300 text-dark-green"
+          className="cursor-pointer hover-text-sky-400 duration-300 text-[#385529]"
         >
           Team Size
         </label>
@@ -142,7 +142,7 @@ const AddEvent = () => {
       <button
         disabled={loading}
         type="submit"
-        className="bg-dark-green text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{ color: 'white' }}
+        className="bg-[#385529] text-white py-3 rounded-xl hover-bg-sky-500 duration-300 mt-3" style={{ color: 'white' }}
       >
         Create Event
       </button>
